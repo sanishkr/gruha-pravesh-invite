@@ -10,12 +10,13 @@
     />
     <style>
       body {
-        font-family: "Open Sans", sans-serif; /* Changed font */
+        font-family: "Open Sans", sans-serif;
         background-color: #f8f4e9;
         color: #4a4a4a;
         margin: 0;
         padding: 20px;
         text-align: center;
+        /* Background pattern removed */
       }
       .container {
         max-width: 800px;
@@ -25,16 +26,18 @@
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         padding: 30px;
         border: 2px solid #e0c2a7;
+        position: relative;
+        z-index: 1;
       }
       h1 {
-        font-family: "Montserrat", sans-serif; /* Changed heading font */
+        font-family: "Montserrat", sans-serif;
         color: #d85c7c;
-        font-size: 2.8em; /* Slightly larger for emphasis */
+        font-size: 2.8em;
         margin-bottom: 10px;
         letter-spacing: 1px;
       }
       h2 {
-        font-family: "Montserrat", sans-serif; /* Changed heading font */
+        font-family: "Montserrat", sans-serif;
         color: #c0604f;
         font-size: 1.6em;
         margin-bottom: 20px;
@@ -51,17 +54,16 @@
         color: #6a4a3c;
       }
       .info-boxes {
-        display: flex; /* Use flexbox for alignment */
-        justify-content: center; /* Center the boxes horizontally */
-        gap: 20px; /* Space between boxes */
+        display: flex;
+        justify-content: center;
+        gap: 20px;
         margin-top: 30px;
-        flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+        flex-wrap: wrap;
       }
       .date-box,
       .address-box {
-        /* Renamed 'details' to 'address-box' and 'date-box' for clarity */
-        flex: 1; /* Allow boxes to grow and shrink */
-        min-width: 280px; /* Minimum width to prevent squishing */
+        flex: 1;
+        min-width: 280px;
         padding: 20px;
         background-color: #fff9f0;
         border-radius: 8px;
@@ -103,7 +105,6 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       }
       .map-link {
-        /* Renamed 'address-link' to 'map-link' for clarity */
         display: block;
         margin-top: 15px;
         color: #007bff;
@@ -115,10 +116,10 @@
         text-decoration: underline;
       }
       .ganesha-icon {
-        margin-bottom: 25px; /* More space below icon */
-        width: 100px; /* Slightly smaller for balance */
+        margin-bottom: 25px;
+        width: 100px;
         height: 100px;
-        color: #d85c7c; /* Apply color via CSS for easy changes */
+        /* Removed color property as it's an image now */
       }
       hr {
         border: none;
@@ -130,34 +131,19 @@
   </head>
   <body>
     <div class="container">
-      <!-- Replaced lock icon with Ganesha Icon (using inline SVG for better quality) --><svg
+      <!-- REPLACED SVG WITH IMG TAG -->
+      <img
         class="ganesha-icon"
-        viewBox="0 0 100 100"
-        fill="currentColor"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M50 0C22.386 0 0 22.386 0 50C0 77.614 22.386 100 50 100C77.614 100 100 77.614 100 50C100 22.386 77.614 0 50 0ZM50 90C27.94 90 10 72.06 10 50C10 27.94 27.94 10 50 10C72.06 10 90 27.94 90 50C90 72.06 72.06 90 50 90Z"
-        />
-        <path
-          d="M50 20C44.477 20 40 24.477 40 30V40H60V30C60 24.477 55.523 20 50 20Z"
-        />
-        <path d="M40 40H60V70H40V40Z" />
-        <path d="M35 70H65V75H35V70Z" />
-        <path
-          d="M30 50C30 47.791 31.791 46 34 46H38C38.21 46 38.414 46.064 38.586 46.183L42 48.5L42 70L30 70V50Z"
-        />
-        <path
-          d="M70 50C70 47.791 68.209 46 66 46H62C61.79 46 61.586 46.064 61.414 46.183L58 48.5L58 70L70 70V50Z"
-        />
-        <path
-          d="M50 30C47.791 30 46 31.791 46 34V38C46 40.209 47.791 42 50 42C52.209 42 54 40.209 54 38V34C54 31.791 52.209 30 50 30Z"
-          fill="#ffffff"
-        />
-        <path
-          d="M48 60C48 62.209 46.209 64 44 64C41.791 64 40 62.209 40 60V55H60V60C60 62.209 58.209 64 56 64C53.791 64 52 62.209 52 60H48Z"
-        />
-      </svg>
+        src="./ganesha.png"
+        alt="Lord Ganesha Symbol"
+        onerror="this.src='./ganesha.png';"
+        style="
+          display: block;
+          margin: 0 auto;
+          border-radius: 50%;
+          object-fit: cover;
+        "
+      />
 
       <p class="invitation-text">Ambika and Anil's invites you to the</p>
       <h1>Gruha Pravesh</h1>
@@ -180,8 +166,7 @@
       <!-- Visual separator -->
       <div class="map-section">
         <h3>Find Our New Home</h3>
-        <!-- UPDATED map source using q= (query) and z=17 (high zoom) to force a prominent red marker -->
-        <iframe
+        <!-- Updated map source using q= (query) and z=17 (high zoom) to force a prominent red marker --><iframe
           src="https://maps.google.com/maps?q=Sowparnika+Sunray,+Flat+No.+508,+Bengaluru,+560074&amp;z=17&amp;output=embed"
           allowfullscreen=""
           loading="lazy"
