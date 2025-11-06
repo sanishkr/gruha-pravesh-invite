@@ -1,0 +1,14 @@
+{
+  "name": "gruha-pravesh-invite",
+  "version": "1.0.0",
+  "description": "A single-page HTML housewarming invitation for deployment on Vercel.",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html"
+  },
+  "keywords": [
+    "html",
+    "static",
+    "vercel"
+  ]
+}
